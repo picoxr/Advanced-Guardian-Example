@@ -14,9 +14,9 @@
 
 ## Description：
 
-- Advanced guardian feature allows multiple devices to use the same map.
-- This sample shows advanced guardian function and provides multi-player scene for reference.
-- The online scene is based on Photon. To run the sample in your own Photon cloud server, please visit [Photon cloud](https://www.photonengine.com/en-US/Photon)
+- The advanced guardian feature allows multiple devices to use the same map.
+- This sample shows advanced guardian function and provides a multi-player scene for reference.
+- The online scene is based on Photon. To run the sample on your own Photon cloud server, please visit [Photon cloud](https://www.photonengine.com/en-US/Photon)
 ![Main menu](https://github.com/picoxr/Advanced-Guardian-Sample/blob/main/Screenshots/Menu_2.png)
 - To enable advanced guardian feature, please go into developer settings>Industry settings>System properties>Large space scene
 ![Industry settings menu](https://github.com/picoxr/Advanced-Guardian-Sample/blob/main/Screenshots/IndustrySettings.png)
