@@ -4,9 +4,9 @@
 
 ## Environment：
 
-- Unity 2020.3.18f1
-- Pico UnityXR SDK v2.0.2_B41
-- 
+- Unity version: 2020.3.18f1
+- Pico SDK version: Pico UnityXR SDK v2.0.2_B41
+- Software version number: c000_rf01_bv1.0.1_sv4.6.3_2022033112043_neo3_b678 and above
 
 ## Applicable devices:
 
@@ -14,11 +14,11 @@
 
 ## Description：
 
-- Advanced guardian feature allows mulitiple devices use a same map in a real area
-- This demo shows advanced guardian function and provide multi-player scene for testing.
-- The online scene is based on Photon, to run the demo on your own device
-- Go into bussiness settings>large space
-
-## Screenshot：
+- Advanced guardian feature allows multiple devices to use the same map.
+- This sample shows advanced guardian function and provides multi-player scene for reference.
+- The online scene is based on Photon. To run the sample in your own Photon cloud server, please visit [Photon cloud](https://www.photonengine.com/en-US/Photon)
+![Main menu](https://github.com/picoxr/Advanced-Guardian-Sample/blob/main/Screenshots/Menu_2.png)
+- To enable advanced guardian feature, please go into developer settings>Industry settings>System properties>Large space scene
+![Industry settings menu](https://github.com/picoxr/Advanced-Guardian-Sample/blob/main/Screenshots/IndustrySettings.png)
 
 
