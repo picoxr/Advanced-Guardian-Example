@@ -4,19 +4,21 @@
 
 ## Environment：
 
-- Unity 2019.4.24f1
-- Pico UnityXR platform SDK v1.2.4
+- Unity 2020.3.18f1
+- Pico UnityXR SDK v2.0.2_B41
+- 
 
 ## Applicable devices:
 
-- Neo 3 series
-- Neo 2 series
+- Neo 3 Pro
 
 ## Description：
 
-- This demo shows how to implement achievement and leaderboard features using PlayFab game service.
-- To Run the demo on your own Title/Studio, modify the Title ID here: [LoginPlayer](https://github.com/picoxr/PlayFab-Achievement-Leaderboard/blob/228d0ef91923d1640e6b58f4c2fad9608cca852b/Client/TankArena_Starter/Assets/Scripts/GameServiceManager.cs#L53)
+- Advanced guardian feature allows mulitiple devices use a same map in a real area
+- This demo shows advanced guardian function and provide multi-player scene for testing.
+- The online scene is based on Photon, to run the demo on your own device
+- Go into bussiness settings>large space
 
 ## Screenshot：
 
-![Screenshot_com DefaultCompany TankArena_2021 09 27-10 05 05](https://user-images.githubusercontent.com/46362299/134836099-c71f5f19-d45b-44d9-9e94-fc2ff459cf44.jpeg)
+
