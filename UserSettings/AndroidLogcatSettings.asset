@@ -1,0 +1,143 @@
+{
+    "m_SelectedDeviceId": "PA7J40DGF8210036W",
+    "m_SelectedPackage": {
+        "deviceId": "PA7J40DGF8210036W",
+        "name": "com.DefaultCompany.AdvancedGuardiansample",
+        "processId": 28565,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "PA7J40DGF8210033W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 13089,
+            "exited": true
+        },
+        {
+            "deviceId": "PA7J40DGF8210033W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 24307,
+            "exited": true
+        },
+        {
+            "deviceId": "PA7J40DGF8210033W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 3398,
+            "exited": true
+        },
+        {
+            "deviceId": "PA7J40DGF8210033W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 4269,
+            "exited": true
+        },
+        {
+            "deviceId": "PA7J40DGF8210033W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 21561,
+            "exited": false
+        },
+        {
+            "deviceId": "PA7H10MGF6220369W",
+            "name": "com.pvr.shortcut",
+            "processId": 9000,
+            "exited": false
+        },
+        {
+            "deviceId": "PA7H10MGF6220369W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 25573,
+            "exited": false
+        },
+        {
+            "deviceId": "PA7J40DGF8210036W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 9315,
+            "exited": true
+        },
+        {
+            "deviceId": "PA7J40DGF8210036W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 25103,
+            "exited": true
+        },
+        {
+            "deviceId": "PA7J40DGF8210036W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 4518,
+            "exited": true
+        },
+        {
+            "deviceId": "PA7J40DGF8210036W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 28929,
+            "exited": true
+        },
+        {
+            "deviceId": "PA7J40DGF8210036W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 25627,
+            "exited": true
+        },
+        {
+            "deviceId": "PA7J40DGF8210036W",
+            "name": "com.DefaultCompany.AdvancedGuardiansample",
+            "processId": 28565,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": true,
+    "m_SymbolPaths": []
+}
