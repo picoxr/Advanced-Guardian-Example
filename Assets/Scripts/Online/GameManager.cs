@@ -16,13 +16,13 @@ public class GameManager : MonoBehaviour
  
     void Start()
     {
-            initPlayer();
+        initPlayer();
     }
 
     private void initPlayer()
     {      
         /*
-        //ÓÃcameraÊý¾Ý
+        //Camera data
         PXR_Plugin.System.UPxr_GetPredictedMainSensorStateNew(ref sensorState, ref frame);
         DebugHelper.Instance.Log("InitPlayer"+ sensorState.globalPose.position.x.ToString());
         //
@@ -37,6 +37,4 @@ public class GameManager : MonoBehaviour
 #endif
          //  LocalPlayer = PhotonNetwork.Instantiate(PlayerPrefeb.name, Vector3.zero, Quaternion.identity, 0);
     }
-
-
 }

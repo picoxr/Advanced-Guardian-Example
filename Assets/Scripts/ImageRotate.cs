@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 public class ImageRotate : MonoBehaviour
 {
     private RectTransform rec_image;
@@ -14,7 +12,7 @@ public class ImageRotate : MonoBehaviour
         {
             rec_image = gameObject.GetComponent<RectTransform>();
         }
-        vec_axis = new Vector3(0,0,-2f);
+        vec_axis = new Vector3(0, 0, -2f);
     }
 
     // Update is called once per frame

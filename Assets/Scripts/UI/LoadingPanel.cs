@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,20 +8,19 @@ public class LoadingPanel : MonoBehaviour
     public void Open()
     {
         gameObject.SetActive(true);
-        StartCoroutine(onLoadingFailed());
+        StartCoroutine(OnLoadingFailed());
     }
 
     public void Close()
-    {   
-        
-        StopCoroutine(onLoadingFailed());
+    {
+        StopCoroutine(OnLoadingFailed());
         gameObject.SetActive(false);
     }
-    private IEnumerator onLoadingFailed()
+
+    private IEnumerator OnLoadingFailed()
     {
         yield return new WaitForSeconds(5f);
         Close();
         DebugHelper.Instance.Log("Loading Fail !");
     }
-
 }

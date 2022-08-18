@@ -27,7 +27,7 @@ public class Player : MonoBehaviourPun
     //private Quaternion _rightHandRot;
     //private Quaternion _leftHandRot;
 
-    public float HeadHeight=1.3f;
+    public float HeadHeight = 1.3f;
     public float bodyHeight = 0.687f;
 
     private void Awake()
@@ -38,15 +38,16 @@ public class Player : MonoBehaviourPun
         HeadHeight = _headModel.transform.position.y;
         bodyHeight = _body.transform.position.y;
     }
+
     void Start()
     {
         if (!photonView.IsMine)
         {
-           HeadCamera.SetActive(false);
+            HeadCamera.SetActive(false);
         }
         else
         {
-          setChildrenLayer(Avatar.transform, "LocalPlayer");
+            SetChildrenLayer(Avatar.transform, "LocalPlayer");
         }
     }
 
@@ -54,32 +55,31 @@ public class Player : MonoBehaviourPun
     {
         if (photonView.IsMine)
         {
-            //Head
+            // Head
             _headPosition.x = Camera.main.transform.position.x;
             _headPosition.z = Camera.main.transform.position.z;
             _headRotation = Camera.main.transform.rotation.eulerAngles;
 
-            _headModel.position = new Vector3(_headPosition.x , HeadHeight , _headPosition.z);
+            _headModel.position = new Vector3(_headPosition.x, HeadHeight, _headPosition.z);
             _headModel.rotation = Quaternion.Euler(_headRotation);
 
-            //Body
-            _body.transform.position = new Vector3(_headPosition.x , bodyHeight, _headPosition.z);
+            // Body
+            _body.transform.position = new Vector3(_headPosition.x, bodyHeight, _headPosition.z);
 
-            //Hand
+            // Hand
             //InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.devicePosition, out _leftHandPos);
             // InputDevices.GetDeviceAtXRNode(XRNode.RightHand).TryGetFeatureValue(CommonUsages.devicePosition, out _rightHandPos);
             //PosPoint
-            PosPoint.transform.position = new Vector3(_headPosition.x,0,_headPosition.z);
+            PosPoint.transform.position = new Vector3(_headPosition.x, 0, _headPosition.z);
         }
     }
 
-    void setChildrenLayer(Transform trans, string layerName)
+    private void SetChildrenLayer(Transform trans, string layerName)
     {
-        Transform[] _trans =  trans.GetComponentsInChildren<Transform>();
+        Transform[] _trans = trans.GetComponentsInChildren<Transform>();
         foreach (Transform value in _trans)
         {
             value.gameObject.layer = LayerMask.NameToLayer(layerName);
         }
-    
     }
 }

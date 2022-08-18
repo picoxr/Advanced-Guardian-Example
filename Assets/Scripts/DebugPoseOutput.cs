@@ -1,29 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.XR.PXR;
 using UnityEngine.UI;
 
 public class DebugPoseOutput : MonoBehaviour
 {
+    public Text unityPose;
+    public Text devicePose;
 
-   public Text UnityPose;
-   public Text DevicePose;
-
-    PxrSensorState2 _pxrSensorState;
+    PxrSensorState2 pxrSensorState;
     int frame;
-    Vector3 _DevicePose;
+    Vector3 _devicePose;
 
     void Update()
     {
-        PXR_Plugin.System.UPxr_GetPredictedMainSensorStateNew(ref _pxrSensorState, ref frame);
-        _DevicePose.x = _pxrSensorState.globalPose.position.x;
-        _DevicePose.y = _pxrSensorState.globalPose.position.y;
-        _DevicePose.z = -_pxrSensorState.globalPose.position.z;
+        PXR_Plugin.System.UPxr_GetPredictedMainSensorStateNew(ref pxrSensorState, ref frame);
+        _devicePose.x = pxrSensorState.globalPose.position.x;
+        _devicePose.y = pxrSensorState.globalPose.position.y;
+        _devicePose.z = -pxrSensorState.globalPose.position.z;
         //DevicePose.text = _DevicePose.ToString();
-        DevicePose.text = "_____";
+        devicePose.text = "_____";
 
-        UnityPose.text = Camera.main.transform.position.ToString("#0.000");
-
+        unityPose.text = Camera.main.transform.position.ToString("#0.000");
     }
 }

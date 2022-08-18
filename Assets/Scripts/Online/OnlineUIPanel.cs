@@ -11,7 +11,7 @@ public class OnlineUIPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvas= transform.GetComponent<Canvas>();
+        canvas = transform.GetComponent<Canvas>();
     }
 
     // Update is called once per frame
@@ -39,5 +39,4 @@ public class OnlineUIPanel : MonoBehaviour
         }
         PhotonNetwork.Disconnect();
     }
-
 }

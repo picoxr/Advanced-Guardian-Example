@@ -1,32 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.XR.PXR;
-using UnityEngine.UI;
-using UnityEngine.XR;
 using System.IO;
 
 public class AdvancedGuardian : MonoBehaviour
 {
     [ Header("UI Panels")]
-    public LoadingPanel LoadingPanel;
-    public RebootPanel RebootPanel;
+    public LoadingPanel loadingPanel;
+    public RebootPanel rebootPanel;
     [Header("Boundary Related")]
-    public float BoundaryDuration=3f;
+    public float boundaryDuration = 3f;
 
     private const string mapPath= "/storage/emulated/0/maps/";
 
     void Start()
     {
-        //Set the boundary visibility on start up
-        StartCoroutine("setBoundaryVisible", BoundaryDuration);
+        // Set the boundary visibility on start up
+        StartCoroutine("SetBoundaryVisible", boundaryDuration);
     }
 
     public void CreateMap()
     {
-        LoadingPanel.Open();
+        if (loadingPanel != null)
+        {
+            loadingPanel.Open();
+        }
+
         PXR_Plugin.System.UPxr_SwitchLargeSpaceScene(true, (callbackValue)=> {
-            if (callbackValue.Equals(true))
+            if (callbackValue)
             {
                 DebugHelper.Instance.Log("Create boundary success !");
                 SaveMap();
@@ -35,12 +36,17 @@ public class AdvancedGuardian : MonoBehaviour
             {
                 DebugHelper.Instance.Log("Create boundary failed !");
             }
-            LoadingPanel.Close();
+
+            if (loadingPanel != null)
+            {
+                loadingPanel.Close();
+            }
         });
     }
+
     private void SaveMap()
     {
-       if(  PXR_Plugin.System.UPxr_SaveLargeSpaceMaps())
+        if(PXR_Plugin.System.UPxr_SaveLargeSpaceMaps())
         {
             DebugHelper.Instance.Log("Save map success !");
         }
@@ -57,17 +63,16 @@ public class AdvancedGuardian : MonoBehaviour
     {
         if(Directory.Exists(mapPath))
         {
-            DirectoryInfo _dirInfo = new DirectoryInfo(mapPath);
-            FileInfo[] _fileInfo = _dirInfo.GetFiles("*.finchz");
-
-            if (_fileInfo.Length > 0)
+            DirectoryInfo dirInfo = new DirectoryInfo(mapPath);
+            FileInfo[] fileInfo = dirInfo.GetFiles("*.finchz");
+            if (fileInfo != null && fileInfo.Length > 0 && loadingPanel != null && rebootPanel != null)
             {
                 DebugHelper.Instance.Log("Detect Map in [internal storage /maps/]");
-                LoadingPanel.Open();
+                loadingPanel.Open();
                 PXR_Plugin.System.UPxr_ImportMaps((callbackValue) => {
                     DebugHelper.Instance.Log("Import Map Success! Please reboot device");
-                    LoadingPanel.Close();
-                    RebootPanel.Open();
+                    loadingPanel.Close();
+                    rebootPanel.Open();
                 });
             }
             else
@@ -80,12 +85,11 @@ public class AdvancedGuardian : MonoBehaviour
             DebugHelper.Instance.Log(" [internal storage /maps/] Not exist ! Please use export map to create it");
             return;
         }
-       
     }
 
     public void ExportMap()
     {
-        LoadingPanel.Open();
+        loadingPanel.Open();
         PXR_Plugin.System.UPxr_ExportMaps((callbackValue) => {
             if (callbackValue)
             {
@@ -95,7 +99,7 @@ public class AdvancedGuardian : MonoBehaviour
             {
                 DebugHelper.Instance.Log("Map stored fail ");
             }
-            LoadingPanel.Close();
+            loadingPanel.Close();
         });
     }
 
@@ -105,11 +109,10 @@ public class AdvancedGuardian : MonoBehaviour
         Application.Quit();
     }
 
-    private IEnumerator setBoundaryVisible(float Duration)
+    private IEnumerator SetBoundaryVisible(float duration)
     {
         PXR_Boundary.SetVisible(true);
-        yield return new WaitForSeconds(Duration);
+        yield return new WaitForSeconds(duration);
         PXR_Boundary.SetVisible(false);
     }
-
 }

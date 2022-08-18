@@ -26,5 +26,4 @@ public class RebootPanel : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
 }
