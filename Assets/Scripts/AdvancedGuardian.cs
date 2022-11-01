@@ -5,7 +5,7 @@ using System.IO;
 
 public class AdvancedGuardian : MonoBehaviour
 {
-    [ Header("UI Panels")]
+    [Header("UI Panels")]
     public LoadingPanel loadingPanel;
     public RebootPanel rebootPanel;
     [Header("Boundary Related")]
@@ -105,7 +105,6 @@ public class AdvancedGuardian : MonoBehaviour
 
     public void Exit()
     {
-        PXR_Plugin.System.UPxr_SetLargeSpaceStatus(false);
         Application.Quit();
     }
 

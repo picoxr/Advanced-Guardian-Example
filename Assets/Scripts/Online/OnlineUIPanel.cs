@@ -27,7 +27,6 @@ public class OnlineUIPanel : MonoBehaviour
 
     public void Exit()
     {
-        PXR_Plugin.System.UPxr_SetLargeSpaceStatus(false);
         Application.Quit();
     }
 

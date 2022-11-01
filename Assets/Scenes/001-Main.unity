@@ -2421,7 +2421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81825738e213a444ba64b6c4060cc8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingText: {fileID: 0}
+  LoadingText: {fileID: 50138065}
 --- !u!1 &1038598906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4332,8 +4332,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1767417360}
   - component: {fileID: 1767417359}
-  - component: {fileID: 1767417358}
   - component: {fileID: 1767417361}
+  - component: {fileID: 1767417358}
   - component: {fileID: 1767417362}
   m_Layer: 0
   m_Name: XR Origin
@@ -4417,7 +4417,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1767417357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b33964da131661f46834b1ee73a3fdcc, type: 3}
+  m_Script: {fileID: 11500000, guid: a3f4c4dcc70200f479b8891c9ea56df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1781455503
