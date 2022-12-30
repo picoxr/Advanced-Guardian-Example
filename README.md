@@ -5,7 +5,7 @@
 ## Environment：
 
 - Unity version: 2020.3.36f1c1
-- Pico SDK version: PICO Unity Integration SDK v2.1.1
+- Pico SDK version: PICO Unity Integration SDK v212
 - Software version number: c000_rf01_bv1.0.1_sv4.6.3_2022033112043_neo3_b678 and above
 
 ## Applicable devices:
