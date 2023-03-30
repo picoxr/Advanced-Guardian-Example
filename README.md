@@ -1,6 +1,6 @@
 # Advanced-Guardian-Example
 
-- If you have any questions/comments, please visit [**Pico Developer Answers**](https://devanswers.pico-interactive.com/) and raise your question there.
+- If you have any questions/comments, please visit [**Pico Developer Support Portal**](https://picodevsupport.freshdesk.com/support/home) and raise your question there.
 
 ## Environment：
 
